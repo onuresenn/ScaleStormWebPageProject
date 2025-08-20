@@ -1,0 +1,71 @@
+<!DOCTYPE html>
+<html lang="tr">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Scalemaster</title>
+  <link rel="stylesheet" href="css/styles.css">
+</head>
+<body>
+  <!-- Navbar -->
+  <header class="navbar">
+    <div class="logo">
+      <img src="assets/logo.png" alt="Runotech Logo" />
+      <span data-i18n="brand">RUNOTECH</span>
+    </div>
+    <nav>
+      <a href="index.html" data-i18n="home">Ana Sayfa</a>
+      <a href="products.html" data-i18n="products">Ürünler</a>
+      <a href="contact.html" data-i18n="contact">İletişim</a>
+      <div class="language-selector">
+        <button class="lang-btn" data-lang="tr">
+          <img src="assets/tr.png" alt="Türkçe" />
+        </button>
+        <button class="lang-btn" data-lang="en">
+          <img src="assets/en.png" alt="English" />
+        </button>
+      </div>
+    </nav>
+  </header>
+
+  <!-- Hero Section -->
+  <section class="hero">
+    <img src="assets/header-truck.png" alt="Kamyon" class="hero-truck" />
+    <h2 data-i18n="heroTitle">Endüstriyel Taşıt Tartım Sistemleri</h2>
+    <p data-i18n="heroSubtitle">Yüksek hassasiyet, güvenilir otomasyon çözümleri.</p>
+    <a href="#" class="cta-btn" data-i18n="cta">Bizimle İletişime Geçin</a>
+  </section>
+
+  <!-- Solutions Section -->
+<section class="solutions">
+  <h2 data-i18n="solutionsTitle">Scalemaster Tartım Çözümleri</h2>
+  <p data-i18n="solutionsText">
+    Scalemaster taşıt-tartım sistemleri, endüstriyel ortamlarda yüksek
+    doğruluk ve dayanıklılık sağlayan yenilikçi çözümler sunar.
+  </p>
+</section>
+
+
+  <!-- Contact Section -->
+  <section class="contact">
+    <div class="contact-container">
+      <div class="contact-form">
+        <h2 data-i18n="contactTitle">Bana Ulaşın</h2>
+        <form>
+          <input type="text" data-i18n-placeholder="name" placeholder="Adınız" required />
+          <input type="email" data-i18n-placeholder="email" placeholder="E-posta" required />
+          <textarea data-i18n-placeholder="message" placeholder="Mesajınız" required></textarea>
+          <button type="submit" data-i18n="send">Gönder</button>
+        </form>
+      </div>
+    </div>
+  </section>
+
+  <!-- Footer -->
+  <footer>
+    <p>© 2025 RUNOTECH</p>
+  </footer>
+
+  <script src="js/script.js"></script>
+</body>
+</html>
