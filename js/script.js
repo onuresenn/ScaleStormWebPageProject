@@ -53,9 +53,9 @@ const translations = {
     products: "Ürünler",
     contact: "İletişim",
     download: "İndir",
-    heroTitle: "Endüstriyel Taşıt Tartım Sistemleri",
-    heroSubtitle: "Yüksek hassasiyet, güvenilir otomasyon çözümleri.",
-    cta: "Bizimle İletişime Geçin",
+    heroTitle: "Endüstriyel Taşıt Tartım Otomasyon Sistemleri",
+    heroSubtitle: "Yüksek hassasiyet, güvenilir ve hızlı otomasyon çözümleri.",
+    cta: "Benimle İletişime Geçin",
     contactTitle: "Bana Ulaşın",
     name: "Adınız",
     email: "E-posta",
@@ -63,7 +63,7 @@ const translations = {
     send: "Gönder",
     solutionsTitle: "Scalemaster Tartım Çözümleri",
     solutionsText:
-      "Scalemaster taşıt-tartım sistemleri, endüstriyel ortamlarda yüksek doğruluk ve dayanıklılık sağlayan yenilikçi çözümler sunar.",
+      "<strong>SCALEMASTER</strong> taşıt tartım sistemleri, endüstriyel ortamlarda yüksek doğruluk ve dayanıklılık sağlayan yenilikçi çözümler sunar.",
 
     intro_title: "SCALEMASTER",
     intro_text: "Scalemaster, gelişmiş veri işleme ve kapsamlı raporlama yetenekleriyle güvenilir bir çözüm sunar. Esnek altyapısı sayesinde taşıt kantarlarının yönetiminde tüm ihtiyaçlara uyum sağlar. Kullanıcı dostu arayüzü, renkli ve anlaşılır menü yapısı ile her seviyeden personelin kolayca öğrenip zorlanmadan kullanabileceği şekilde tasarlanmıştır.",
@@ -103,8 +103,8 @@ const translations = {
     email: "E-posta",
 
 
-    pageTitle: "Scalemaster İndirmeler",
-    pageDesc: "Kurulum dosyaları ve dokümanlara aşağıdan ulaşabilirsiniz. En güncel sürümü kullanmanızı öneririz.",
+    pageTitle: "İndirmeler",
+    pageDesc: "Kurulum dosyaları ve dokümanlara aşağıdan ulaşabilirsiniz.",
     docTitle: "Doküman",
     docDesc: "Kullanım kılavuzu ve kurulum notları.",
     docBtn: "📄 PDF İndir",
@@ -119,9 +119,9 @@ const translations = {
     products: "Products",
     contact: "Contact",
     download: "Download",
-    heroTitle: "Industrial Vehicle Weighing Systems",
-    heroSubtitle: "High precision, reliable automation solutions.",
-    cta: "Contact Us",
+    heroTitle: "Industrial Vehicle Weighing Automation Systems",
+    heroSubtitle: "High-precision, reliable, and fast automation solutions.",
+    cta: "Contact Me",
     contactTitle: "Get in Touch",
     name: "Your Name",
     email: "Your Email",
@@ -129,7 +129,7 @@ const translations = {
     send: "Send",
     solutionsTitle: "Scalemaster Weighing Solutions",
     solutionsText:
-      "Scalemaster vehicle weighing systems provide innovative solutions ensuring high accuracy and durability in industrial environments.",
+      "<strong>SCALEMASTER</strong> vehicle weighing systems provide innovative solutions ensuring high accuracy and durability in industrial environments.",
 
     intro_title: "SCALEMASTER",
     intro_text: "Scalemaster offers a reliable solution with advanced data processing and comprehensive reporting capabilities. Thanks to its flexible infrastructure, it adapts to all needs in weighbridge management. With its user-friendly interface and colorful, easy-to-understand menu structure, it is designed to be easily learned and used by personnel at all levels.",
@@ -169,8 +169,8 @@ const translations = {
     phone: "Phone",
     email: "Email",
 
-    pageTitle: "Scalemaster Downloads",
-    pageDesc: "You can access installation files and documents below. We recommend using the latest version.",
+    pageTitle: "Downloads",
+    pageDesc: "You can access installation files and documents below.",
     docTitle: "Document",
     docDesc: "User manual and installation notes.",
     docBtn: "📄 Download PDF",
@@ -188,7 +188,7 @@ function setLanguage(lang) {
   document.querySelectorAll("[data-i18n]").forEach(el => {
     const key = el.getAttribute("data-i18n");
     if (translations[lang][key]) {
-      el.textContent = translations[lang][key];
+      el.innerHTML = translations[lang][key];
     }
   });
 
