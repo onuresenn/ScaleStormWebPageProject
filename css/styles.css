@@ -388,4 +388,60 @@ body.contact-page {
   margin-bottom: 15px;
 }
 
+.product-features {
+  list-style: none;
+  padding: 0;
+}
 
+.product-features li {
+  position: relative;
+  padding-left: 24px;
+  margin-bottom: 8px;
+}
+
+/* normal maddeler: ✔ */
+.product-features li::before {
+  content: "✔";
+  color: #003366; /* lacivert */
+  font-weight: bold;
+  position: absolute;
+  left: 0;
+}
+
+/* özel madde: kırmızı yıldız */
+.product-features li.highlight-star::before {
+  content: "★";
+  color: #cc0000; /* kırmızı */
+}
+
+.product-card {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  background: #fff;
+  border-radius: 12px;
+  padding: 20px;
+  box-shadow: 0 2px 6px rgba(0,0,0,0.1);
+  min-height: 100%; /* kart boyları eşitlensin */
+}
+
+.pricing-tag {
+  text-align: center;
+  font-weight: bold;
+  padding: 8px 12px;
+  border-radius: 8px;
+  margin-top: auto; /* kartın en altına iter */
+  font-size: 14px;
+}
+
+.pricing-tag.free {
+  background: #d6f5d6;
+  color: #006400;  
+  border: 1px solid #006400;
+}
+
+.pricing-tag.paid {
+  background: #f8d6d6;  
+  color: #8b0000;  
+  border: 1px solid #8b0000;
+}

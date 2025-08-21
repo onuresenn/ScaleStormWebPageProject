@@ -156,20 +156,24 @@ main.page-content {
   justify-content: center;
   align-items: stretch;
   gap: 24px;
-  max-width: 900px;
   margin: 24px auto 0;
   padding: 0 16px 40px;
   flex-wrap: wrap;
 }
 
 .download-card {
-  flex: 1 1 260px;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
   background: #f5f6f8;
   border-radius: 12px;
   padding: 26px 20px;
   text-align: center;
   box-shadow: 0 4px 10px rgba(0,0,0,0.08);
   transition: transform 0.2s ease, box-shadow 0.2s ease;
+  width: auto;       /* ✅ içerik kadar genişlik */
+  min-width: 220px;  /* ✅ çok daralmaması için alt limit */
+  max-width: 100%;   /* ✅ responsive bozulmasın */
 }
 
 .download-card:hover {
@@ -193,6 +197,7 @@ main.page-content {
   margin: 0 0 14px;
   color: #44556b;
   font-size: 0.95rem;
+  flex-grow: 1;
 }
 
 /* Buton */
@@ -205,6 +210,7 @@ main.page-content {
   border-radius: 8px;
   text-decoration: none;
   transition: background 0.2s ease;
+  margin-top: auto;
 }
 
 .download-btn:hover {
@@ -222,6 +228,26 @@ main.page-content {
     max-width: 420px;
   }
 }
+
+.features {
+  list-style: none;
+  padding: 0;
+}
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.features .icon-check {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23003366" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4L9 16.2z"/></svg>') no-repeat center;
+  background-size: contain;
+}
+
 
 /* -------------------------
    FOOTER

@@ -210,3 +210,23 @@ footer {
     margin-bottom: 24px;  /* mobilde ekstra dikey boşluk */
   }
 }
+
+
+.features {
+  list-style: none;
+  padding: 0;
+}
+.features li {
+  display: flex;
+  align-items: center;
+  margin-bottom: 8px;
+  font-size: 16px;
+}
+.features .icon-check {
+  display: inline-block;
+  width: 18px;
+  height: 18px;
+  margin-right: 8px;
+  background: url('data:image/svg+xml;utf8,<svg xmlns="http://www.w3.org/2000/svg" fill="%23003366" viewBox="0 0 24 24"><path d="M9 16.2l-3.5-3.5 1.4-1.4L9 13.4l7.1-7.1 1.4 1.4L9 16.2z"/></svg>') no-repeat center;
+  background-size: contain;
+}
