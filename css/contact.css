@@ -169,8 +169,27 @@ footer {
   .navbar nav {
     flex-wrap: wrap;
     justify-content: center;
-    gap: 12px;
-    margin-top: 6px;
+    gap: 20px;
+    margin-top: 10px;
+    line-height: 1;
+  }
+
+   .navbar nav a {
+    font-size: 0.9rem;   /* ✅ biraz küçüldü */
+    padding: 6px 0;      /* ✅ üst-alt boşluk eklendi */
+  }
+
+  /* ✅ Menü ile başlık arasına boşluk */
+  .contact-header {
+    margin-top: 30px;   /* üstten biraz mesafe */
+  }
+
+  .contact-header h2 {
+    font-size: 1.6rem;  /* başlığı biraz küçült */
+  }
+
+  .contact-header p {
+    font-size: 0.95rem; /* açıklamayı da küçült */
   }
 
   /* bayraklar mobilde alt satırda ve ortalı */
