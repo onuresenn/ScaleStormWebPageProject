@@ -13,6 +13,37 @@ body {
 }
 
 /* Navbar */
+/* ------------------ Responsive Navbar ------------------ */
+/* ------------------ Navbar Responsive (menü yatay) ------------------ */
+@media (max-width: 768px) {
+  .navbar {
+    flex-direction: column;
+    align-items: flex-start;
+  }
+
+  .navbar nav {
+    flex-direction: row;   /* linkleri yatay sırala */
+    flex-wrap: wrap;       /* taşarsa alta geçsin */
+    justify-content: center;
+    width: 100%;
+    gap: 15px;
+    margin-top: 10px;
+  }
+
+  .navbar nav a {
+    padding: 6px 0;
+    font-size: 0.9rem;
+  }
+
+  .language-selector {
+    margin-top: 10px;
+    display: flex;
+    justify-content: center;
+    width: 100%;
+  }
+}
+
+ 
 .navbar {
   display: flex;
   justify-content: space-between; /* logo solda, menü sağda */
@@ -31,19 +62,45 @@ body {
   color: white;
   text-decoration: none;
   font-weight: 500;
+  line-height: 1;
 }
+
+.navbar nav a.active {
+  text-decoration: none;  /* alt çizgi kalktı */
+  font-weight: 600;
+}
+
 
 /* Logo */
 .logo {
   display: flex;
   align-items: center;
-  gap: 8px;
+  gap: 2px;
   font-weight: bold;
 }
 
 .logo img {
   height: 30px;
 }
+
+
+.logo a {
+  display: flex;
+  align-items: center;
+  text-decoration: none; /* alt çizgi kalksın */
+  color: inherit; /* nav yazı rengiyle aynı kalsın */
+}
+
+.logo img {
+  height: 40px; /* logonun boyutunu sabitle */
+  margin-right: 8px; /* logo ile yazı arasına boşluk */
+}
+
+.logo span {
+  font-size: 1.2rem; 
+  font-weight: bold;
+}
+
 
 /* Dil Seçici */
 .language-selector {
@@ -156,3 +213,179 @@ footer {
   font-size: 0.9rem;
   font-weight: bold;
 }
+
+
+/* Ürünler sayfası */
+.products {
+  display: flex;
+  justify-content: space-around;
+  align-items: stretch;
+  padding: 3rem 1rem;
+  background: white;
+  color: #0d2b5c;
+  gap: 20px;
+  flex-wrap: wrap; /* küçük ekranda satır kaydır */
+}
+
+.products ul {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;        /* Ortaya alır */
+  display: table;        /* Ortalamayı düzgün yapar */
+}
+
+.products li {
+  display: table-row;    /* Satır gibi davranır */
+  text-align: left;      /* Yazılar sola yaslanır */
+}
+
+.product-card ul.product-features {
+  list-style: none;
+  padding: 0;
+  margin: 0 auto;     /* hepsi ortalanır */
+  width: 85%;         /* sabit genişlik */
+}
+
+.product-card ul.product-features li {
+  display: flex;
+  align-items: flex-start;
+  gap: 8px;           /* ikon ve yazı arası boşluk */
+  justify-content: flex-start; /* ikonlar ve yazılar hep soldan hizalanır */
+}
+
+
+.product-card {
+  flex: 1;
+  min-width: 250px;   /* kart çok küçülmesin */
+  max-width: 700px;   /* kart genişliği sınırla */
+  background: #f8f9fa;
+  border-radius: 10px;
+  padding: 2rem;
+  margin: 0 auto;     /* ortalasın */
+  text-align: center;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.product-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.product-card h2 {
+  margin-bottom: 1rem;
+  color: #0073e6;
+}
+
+/* Alt görsel alanı */
+
+.products-image {
+  display: flex;
+  justify-content: center; /* yatayda ortala */
+  align-items: center;     /* dikeyde ortala (yükseklik verilirse) */
+  padding: 3rem 1rem;
+  background-color: white;
+}
+
+.products-image img {
+  max-width: 100%;   /* mobilde taşmasın */
+  height: auto;      /* oran korunsun */
+}
+
+@media (max-width: 768px) {
+  .products-image img {
+    max-width: 90%; /* ekranın %90’ına sığsın */
+  }
+}
+
+
+.product-intro {
+  background: #f9f9f9;      /* Açık gri arkaplan */
+  color: #0d2b5c;           /* Lacivert yazı */
+  text-align: center;
+  padding: 3rem 1rem;
+}
+
+.product-intro h2 {
+  font-size: 2rem;
+  margin-bottom: 1.5rem;
+  color: #0d2b5c;
+}
+
+.product-intro p {
+  max-width: 800px;
+  margin: 0 auto;
+  font-size: 1.1rem;
+  line-height: 1.8;
+}
+
+.product-features {
+  list-style: none;
+  padding: 0;
+  margin-top: 15px;
+  font-size: 14px;
+  text-align: left;
+}
+
+.product-features li {
+  margin: 8px 0;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+
+/* Mobil görünüm */
+@media (max-width: 768px) {
+  .products {
+    flex-direction: column;
+    align-items: center;
+  }
+
+  .product-card {
+    width: 90%;      /* ekranın %90'ını kaplasın */
+    max-width: none; /* üstteki max sınırı kaldır */
+    margin-bottom: 20px;
+  }
+}
+
+/* ==========================
+   CONTACT SAYFASI ÖZEL TASARIM
+   ========================== */
+body.contact-page {
+  background: #fff;      /* ✅ Arka plan beyaz */
+  color: #0d2b5c;        /* ✅ Yazılar lacivert */
+}
+
+.contact-cards {
+  display: flex;
+  justify-content: center;
+  gap: 30px;
+  padding: 20px 10%;
+  flex-wrap: wrap;
+}
+
+.contact-card {
+  flex: 1 1 250px;
+  max-width: 300px;
+  background: #f8f9fa;   /* ✅ Açık gri kutucuk */
+  padding: 25px;
+  text-align: center;
+  border-radius: 15px;
+  box-shadow: 0 4px 6px rgba(0,0,0,0.1);
+  color: #0d2b5c;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+.contact-card:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 12px rgba(0,0,0,0.15);
+}
+
+.contact-card i {
+  font-size: 2rem;
+  color: #0073e6;
+  margin-bottom: 15px;
+}
+
+

@@ -1,44 +1,67 @@
 <!DOCTYPE html>
 <html lang="tr">
+
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>İletişim - Runotech</title>
-  <link rel="stylesheet" href="css/styles.css">
+  <title>İletişim | RUNOTECH</title>
+  <link rel="stylesheet" href="css/contact.css" />
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.5.0/css/all.min.css" />
 </head>
-<body>
+
+<body class="contact-page">
   <!-- Navbar -->
   <header class="navbar">
     <div class="logo">
       <img src="assets/logo.png" alt="Runotech Logo" />
-      <span data-i18n="brand">RUNOTECH</span>
+      <span data-i18n="brand_name">RUNOTECH</span>
     </div>
     <nav>
-      <a href="index.html" data-i18n="home">Ana-Sayfa</a>
+      <a href="index.html" data-i18n="home">Ana Sayfa</a>
       <a href="products.html" data-i18n="products">Ürünler</a>
-      <a href="contact.html" data-i18n="contact">İletişim</a>
+      <a href="contact.html" class="active" data-i18n="contact">İletişim</a>
+      <a href="document.html" data-i18n="download" class="active">İndir</a>
       <div class="language-selector">
-        <button class="lang-btn" data-lang="tr">
-          <img src="assets/tr.png" alt="Türkçe" />
-        </button>
-        <button class="lang-btn" data-lang="en">
-          <img src="assets/en.png" alt="English" />
-        </button>
+        <button class="lang-btn" data-lang="tr"><img src="assets/tr.png" alt="Türkçe" /></button>
+        <button class="lang-btn" data-lang="en"><img src="assets/en.png" alt="English" /></button>
       </div>
     </nav>
   </header>
 
   <!-- İçerik -->
-  <section class="content">
-    <h2>İletişim Sayfası</h2>
-    <p>Bu sayfa şimdilik boştur.</p>
-  </section>
+  <main>
+    <!-- İletişim Başlık -->
+    <section class="contact-header">
+      <h2 data-i18n="contact_title">İletişim Bilgileri</h2>
+      <p data-i18n="contact_desc">Bana aşağıdaki iletişim bilgilerinden ulaşabilirsiniz.</p>
+    </section>
+
+    <!-- İletişim Kartları -->
+    <section class="contact-cards">
+      <div class="contact-card">
+        <i class="fas fa-map-marker-alt"></i>
+        <h3 data-i18n="address">Adres</h3>
+        <p>Bağlar Mah. 63. Sok. No:2/5<br>Bağcılar / İSTANBUL</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-phone"></i>
+        <h3 data-i18n="phone">Telefon</h3>
+        <p>+90 532 270 71 13</p>
+      </div>
+      <div class="contact-card">
+        <i class="fas fa-envelope"></i>
+        <h3 data-i18n="email">E-posta</h3>
+        <p><a href="mailto:muh.onuresen@gmail.com">muh.onuresen@gmail.com</a></p>
+      </div>
+    </section>
+  </main>
 
   <!-- Footer -->
   <footer>
     <p>© 2025 RUNOTECH</p>
   </footer>
 
-  <script src="script.js"></script>
+  <script src="js/script.js"></script>
 </body>
+
 </html>
