@@ -230,6 +230,25 @@ document.addEventListener("DOMContentLoaded", () => {
 });
 
 
+document.getElementById("contact-form").addEventListener("submit", async function(e) {
+  e.preventDefault();
+  const form = e.target;
+  const data = new FormData(form);
+
+  const response = await fetch(form.action, {
+    method: form.method,
+    body: data,
+    headers: { 'Accept': 'application/json' }
+  });
+
+  if (response.ok) {
+    document.getElementById("form-message").innerText = "Mesajınız başarıyla gönderildi!";
+    form.reset();
+  } else {
+    document.getElementById("form-message").innerText = "Bir hata oluştu, tekrar deneyin.";
+  }
+});
+
 
 // ===============================
 // Sayfa açıldığında önceki seçim yüklensin

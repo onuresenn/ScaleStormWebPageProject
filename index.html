@@ -50,20 +50,22 @@
   </section>
 
 
-  <!-- Contact Section -->
-  <section class="contact">
-    <div class="contact-container">
-      <div class="contact-form">
-        <h2 data-i18n="contactTitle">Bana Ulaşın</h2>
-        <form>
-          <input type="text" data-i18n-placeholder="name" placeholder="Adınız" required />
-          <input type="email" data-i18n-placeholder="email" placeholder="E-posta" required />
-          <textarea data-i18n-placeholder="message" placeholder="Mesajınız" required></textarea>
-          <button type="submit" data-i18n="send">Gönder</button>
-        </form>
-      </div>
+<!-- Contact Section -->
+<section class="contact">
+  <div class="contact-container">
+    <div class="contact-form">
+      <h2 data-i18n="contactTitle">Bana Ulaşın</h2>
+      <form action="https://formspree.io/f/meozbdjy" method="POST">
+        <input type="text" name="name" data-i18n-placeholder="name" placeholder="Adınız" required />
+        <input type="email" name="email" data-i18n-placeholder="email" placeholder="E-posta" required />
+        <textarea name="message" data-i18n-placeholder="message" placeholder="Mesajınız" required></textarea>
+        <button type="submit" data-i18n="send">Gönder</button>
+      </form>
     </div>
-  </section>
+  </div>
+  <p id="form-message"></p>
+</section>
+
 
   <!-- Footer -->
   <footer>
